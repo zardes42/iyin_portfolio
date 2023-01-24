@@ -19,7 +19,7 @@ const NavBar = () => {
               </li>
           ))}
       </ul>
-      <div className="app__navbar-manu">
+      <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
         {toggle && (
           <motion.div
@@ -27,14 +27,14 @@ const NavBar = () => {
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)}/>
-            <ul className="app__navbar-links"></ul>
+            <ul className="app__navbar-links">
             {["home", "about", "work", "skills", "contact"].map((item) => (
               <li  key={item}>
                 <div />
                 <a onClick={() => setToggle(false)} href={`#${item}`}>{item}</a>
               </li>
             ))}
-            
+            </ul>
           </motion.div>
         )}
       </div>
