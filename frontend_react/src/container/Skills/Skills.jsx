@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { AppWrap } from "../../wrapper";
+import { AppWrap,MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 
@@ -64,8 +64,8 @@ const Skills = () => {
               </motion.div>
               <ReactTooltip 
               anchorId={work.name}
-              variant='light'
-              arrowColor='#fff'
+              variant='white'
+              arrowColor='#000'
               className="skills-tooltip"
               content={work.desc}
               />
@@ -82,4 +82,8 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(Skills, "skills");
+export default AppWrap(
+  MotionWrap(Skills,'app__skills'),
+   "skills",
+   'app__whitebg'
+   );
