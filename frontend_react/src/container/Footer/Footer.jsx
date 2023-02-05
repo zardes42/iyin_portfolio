@@ -3,7 +3,10 @@ import './Footer.scss'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className="copyright">
+    <p className="p-text">@2020 IYINOLUWA</p>
+    <p className="p-text">All rights reserved</p>
+  </div>
   )
 }
 
