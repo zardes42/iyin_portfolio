@@ -50,7 +50,7 @@ const Skills = () => {
               <p className="bold-text">{exp.year}</p>
             </div>
             <motion.div className="app__skills-exp-works">
-              {exp?.works?.map(work =>  <>
+              {exp?.works?.map(work =>  (<>
               <motion.div  whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className="app__skills-exp-work"
@@ -71,7 +71,7 @@ const Skills = () => {
               />
                 
               
-            </>)}
+            </>))}
             </motion.div>
            </motion.div>
           ))} 
