@@ -18,7 +18,7 @@ const Footer = () => {
   const { name, email, message } = formData;
 
   const handleChangeInput = (e) => {
-    const { name, value } = e.target.value;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
@@ -103,5 +103,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, "app__footer"),
   "contact",
-  "app__whitebg"
+  'app__whitebg'
 );
